@@ -125,7 +125,7 @@ if [[ ${BUILD_TYPE} = live ]]; then
 	#set some varyables
 	case ${TRINITY_SCM} in
 	git)
-		 EGIT_REPO_URI="${TRINITY_GIT_MIRROR:=http://scm.trinitydesktop.org/scm/git}/${TRINITY_MODULE_NAME}"
+		 EGIT_REPO_URI="${TRINITY_GIT_MIRROR:=http://mirror.git.trinitydesktop.org/cgit}/${TRINITY_MODULE_NAME}"
 		 EGIT_BRANCH="${TRINITY_GIT_BRANCH:=master}"
 		 EGIT_PROJECT="trinity/${TRINITY_MODULE_NAME}"
 		 EGIT_HAS_SUBMODULES="yes"
