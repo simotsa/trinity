@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
-EAPI="3"
+# $Id$
+EAPI="5"
 TRINITY_MODULE_NAME="kdebase"
 
 inherit trinity-meta
 
-DESCRIPTION="Kicker is the Trinity application starter panel, also capable of some useful applets and extensions."
+DESCRIPTION="The Trinity application starter panel, capable of applets and extensions"
 KEYWORDS="~amd64 ~x86"
 IUSE="hal xcomposite"
 

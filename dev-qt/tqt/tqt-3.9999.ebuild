@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 EAPI=5
 
 inherit eutils git-2 flag-o-matic toolchain-funcs
@@ -25,10 +25,10 @@ IUSE="cups debug doc examples firebird ipv6 mysql nas nis opengl postgres sqlite
 # TODO: optional support for xrender and xrandr
 
 RDEPEND="
-	virtual/jpeg
+	virtual/jpeg:=
 	>=media-libs/freetype-2
 	>=media-libs/libmng-1.0.9
-	media-libs/libpng
+	media-libs/libpng:=
 	sys-libs/zlib
 	x11-libs/libXft
 	x11-libs/libXcursor
@@ -40,7 +40,7 @@ RDEPEND="
 	mysql? ( virtual/mysql )
 	nas? ( >=media-libs/nas-1.5 )
 	opengl? ( virtual/opengl virtual/glu )
-	postgres? ( dev-db/postgresql )
+	postgres? ( dev-db/postgresql:= )
 	xinerama? ( x11-libs/libXinerama )
 	!dev-qt/qt:3
 	!dev-qt/qt-meta:3"
@@ -107,7 +107,7 @@ pkg_setup() {
 
 src_prepare() {
 	# Apply user-provided patches
-	epatch_user 
+	epatch_user
 
 	# Do not link with -rpath. See bug #75181.
 	find "${S}"/mkspecs -name qmake.conf | xargs \
@@ -118,7 +118,7 @@ src_prepare() {
 #
 #		epatch "${FILESDIR}"/tqt-3.3.8-immtqt+gcc-4.3.patch
 #	fi
-	
+
 	# set c/xxflags and ldflags
 	strip-flags
 	append-flags -fno-strict-aliasing
@@ -253,6 +253,7 @@ EOF
 
 	insinto /etc/revdep-rebuild
 	doins "${T}"/44-tqt3-revdep
+	doenvd "${T}"/44tqt3
 
 	if [ "${SYMLINK_LIB}" = "yes" ]; then
 		dosym $(get_abi_LIBDIR ${DEFAULT_ABI}) ${TQTBASE}/lib

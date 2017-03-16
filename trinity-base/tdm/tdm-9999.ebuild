@@ -1,7 +1,7 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
-EAPI="3"
+# $Id$
+EAPI="5"
 TRINITY_MODULE_NAME="tdebase"
 
 inherit trinity-meta
@@ -10,7 +10,7 @@ DESCRIPTION="Trinity login manager, similar to xdm and gdm"
 KEYWORDS=
 IUSE="pam xdmcp xcomposite sak +xrandr"
 
-DEPEND="pam? ( trinity-base/kdebase-pam )
+DEPEND="pam? ( trinity-base/tdebase-pam )
 	xdmcp? ( x11-libs/libXdmcp )
 	xcomposite? ( x11-libs/libXcomposite )
 	xrandr? ( x11-libs/libXrandr )

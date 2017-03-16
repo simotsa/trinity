@@ -1,7 +1,7 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
-EAPI="3"
+# $Id$
+EAPI="5"
 TRINITY_MODULE_NAME="tdegraphics"
 
 inherit trinity-meta
@@ -13,6 +13,6 @@ IUSE=""
 DEPEND=">=media-libs/freetype-2.2
 	media-libs/fontconfig
 	media-libs/libart_lgpl
-	media-libs/lcms:0
+	media-libs/lcms
 	dev-libs/fribidi"
 RDEPEND="${DEPEND}"

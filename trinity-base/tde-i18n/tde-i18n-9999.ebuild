@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 EAPI="4"
 TRINITY_MODULE_NAME="tde-i18n"
 
@@ -13,7 +13,7 @@ HOMEPAGE="http://www.trinitydesktop.org/"
 LICENSE="GPL-2"
 
 SLOT="${TRINITY_VER}"
-KEYWORDS="amd64 x86"
+KEYWORDS=""
 IUSE=""
 
 DEPEND=">=trinity-base/tdelibs-${PV}:${SLOT}"

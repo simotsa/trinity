@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 EAPI="5"
 TRINITY_MODULE_NAME="kdepim"
 
@@ -36,7 +36,7 @@ TSM_EXTRACT_ALSO="certmanager/lib/
 	kdgantt/
 	kmail/"
 
-use exchange && TSM_EXTRACT_ALSO+=" libkpimexchange/core/"
+TSM_EXTRACT_ALSO+=" libkpimexchange/core/" # required for USE=exchange
 
 src_configure () {
 	mycmakeargs=(

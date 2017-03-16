@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 EAPI="4"
 TRINITY_MODULE_NAME="$PN"
 
@@ -108,7 +108,7 @@ src_install() {
 		libdirs="${TDEDIR}/${libdir}:${libdirs}"
 	done
 
-	cat <<EOF >"${D}/etc/env.d/00trinitypaths-${SLOT}" # number goes down with version upgrade
+	cat <<EOF >"${D}/etc/env.d/45trinitypaths-${SLOT}" # number goes down with version upgrade
 PATH=${TDEDIR}/bin
 ROOTPATH=${TDEDIR}/sbin:${TDEDIR}/bin
 LDPATH=${libdirs#:}
