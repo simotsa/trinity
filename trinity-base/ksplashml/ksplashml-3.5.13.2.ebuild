@@ -1,12 +1,12 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
-EAPI="3"
+# $Id$
+EAPI="5"
 TRINITY_MODULE_NAME="kdebase"
 
 inherit trinity-meta
 
-DESCRIPTION="Trinity splashscreen framework (the splashscreen of Trinity itself, not of individual apps)"
+DESCRIPTION="Trinity splashscreen framework (of Trinity itself, not of individual apps)"
 KEYWORDS="~amd64 ~x86"
 IUSE="xinerama"
 

@@ -1,6 +1,6 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 EAPI="5"
 TRINITY_MODULE_NAME="kdeutils"
 
@@ -10,5 +10,5 @@ DESCRIPTION="Trinity calculator"
 KEYWORDS="~x86 ~amd64"
 IUSE=""
 
-DEPEND="dev-libs/gmp"
+DEPEND="dev-libs/gmp:*"
 RDEPEND="${DEPEND}"
