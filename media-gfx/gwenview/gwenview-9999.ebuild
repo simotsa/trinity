@@ -1,10 +1,10 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
-EAPI="4"
+EAPI="7"
 TRINITY_MODULE_TYPE="applications"
 
-inherit trinity-base
+inherit trinity-base-2
 
 DESCRIPTION="A Trinity Graphics Viewer"
 KEYWORDS=""
@@ -15,13 +15,13 @@ need-trinity 9999
 
 
 DEPEND="kipi? ( >=media-plugins/kipi-plugins-0.1.0_beta2 )
-        media-gfx/exiv2"
+	media-gfx/exiv2"
 
 RDEPEND="${DEPEND}"
 
 src_prepare() {
 
-	trinity-base_src_prepare
+	trinity-base-2_src_prepare
 
 	cp /usr/share/aclocal/libtool.m4 admin/libtool.m4.in
 	( cd admin && libtoolize)
